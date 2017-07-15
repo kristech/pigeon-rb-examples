@@ -26,7 +26,7 @@
 #include "common.h"
 
 /*
- * printAbort
+ * Print error and exit
  */
 void printExit(const char *s)
 {
