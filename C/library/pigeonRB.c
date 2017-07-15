@@ -36,7 +36,7 @@ static const int outputs_vec[] = {OUT1, OUT2, OUT3, OUT4, OUT5, OUT6, OUT7, OUT8
 static model_t model = UNKNOWN;
 
 /*
- *	Enable/disable all outputs
+ *  Enable/disable all outputs
  *  en = true  - enable outputs
  *  en = false - disable outputs
  */
@@ -53,7 +53,7 @@ void enableOutputs(bool en)
 }
 
 /*
- *	pigeonSetup function must be called at the start of program 
+ *  pigeonSetup function must be called at the start of program 
  *  mod = {RB100, RB100_CM3, RB300, RB300_CM3}
  */
 void pigeonSetup(model_t mod)
@@ -67,14 +67,14 @@ void pigeonSetup(model_t mod)
 	
 	//binary outputs
 	pinMode(OUTE, OUTPUT);
-    pinMode(OUT1, OUTPUT);
-    pinMode(OUT2, OUTPUT);
-    pinMode(OUT3, OUTPUT);
-    pinMode(OUT4, OUTPUT);
-    pinMode(OUT5, OUTPUT);
-    pinMode(OUT6, OUTPUT);
-    pinMode(OUT7, OUTPUT);
-    pinMode(OUT8, OUTPUT);
+	pinMode(OUT1, OUTPUT);
+	pinMode(OUT2, OUTPUT);
+	pinMode(OUT3, OUTPUT);
+	pinMode(OUT4, OUTPUT);
+	pinMode(OUT5, OUTPUT);
+	pinMode(OUT6, OUTPUT);
+	pinMode(OUT7, OUTPUT);
+	pinMode(OUT8, OUTPUT);
 	//enable all outputs
 	enableOutputs(true);
 	
@@ -95,16 +95,16 @@ void pigeonSetup(model_t mod)
 	pinMode(IND4, INPUT);
 	
 	//watchdog
-    pinMode(WATCHDOG_EN, OUTPUT);
-    pinMode(WATCHDOG_IN, OUTPUT);
+	pinMode(WATCHDOG_EN, OUTPUT);
+	pinMode(WATCHDOG_IN, OUTPUT);
 
-    //powercontrol
-    pinMode(CTRL_3V3, OUTPUT);
-    pinMode(CTRL_5V, OUTPUT);
-    pinMode(FAULT_5V,INPUT);
-           
-    //LAN9514
-    pinMode(LAN_RESET, OUTPUT);
+	//powercontrol
+	pinMode(CTRL_3V3, OUTPUT);
+	pinMode(CTRL_5V, OUTPUT);
+	pinMode(FAULT_5V,INPUT);
+
+	//LAN9514
+	pinMode(LAN_RESET, OUTPUT);
 	
 	//LED
 	pinMode(LED0, OUTPUT);
@@ -127,7 +127,7 @@ void pigeonSetup(model_t mod)
 }
 
 /*
- *	pigeonClose function must be called at the end of program 
+ *  pigeonClose function must be called at the end of program 
  */
 void pigeonClose(void)
 {
@@ -148,7 +148,7 @@ void pigeonClose(void)
 }
 
 /*
- *	Read optoisolated input
+ *  Read optoisolated input
  *  input_nr - number of input 1..8
  */
 bool readOptoInput(uint8_t input_nr)
@@ -166,7 +166,7 @@ bool readDryInput(uint8_t input_nr)
 }
 
 /*
- *	Read all binary inputs (optoisolated and dry contact)
+ *  Read all binary inputs (optoisolated and dry contact)
  *  bi[8] - values of optoisolated inputs
  *  di[4] - values of dry contact inputs
  */
@@ -187,7 +187,7 @@ void readBinInputs(bool bi[8], bool di[4])
 
 
 /*
- *	Write binary output
+ *  Write binary output
  *  input_nr - number of output
  *  value - value to write
  */
@@ -197,7 +197,7 @@ void writeBinOutput(uint8_t input_nr, bool value)
 }
 
 /*
- *	Write all binary outputs
+ *  Write all binary outputs
  *  values[8] - values to write
  */
 void writeBinOutputs(bool values[8])
@@ -211,7 +211,7 @@ void writeBinOutputs(bool values[8])
 }
 
 /*
- *	Turn off all binary outputs
+ *  Turn off all binary outputs
  */
 void turnOffAllBinOutputs(void)
 {
@@ -222,11 +222,11 @@ void turnOffAllBinOutputs(void)
 	{
 		writeBinOutput(outputs_vec[i], false);
 	}
-	enableOutputs(true);		 
- }
+	enableOutputs(true);
+}
  
 /*
- *	Read of analog inputs
+ *  Read of analog inputs
  *  ai[4] - read values
  */
 void readAnalogInputs(float ai[4])
@@ -245,7 +245,7 @@ void readAnalogInputs(float ai[4])
 }
 
 /*
- *	Write analog outputs 
+ *  Write analog outputs 
  *  ao[2] - write values 0 (0V) ... 1000 (10.00V)
  */
 void writeAnalogOutputs(uint16_t ao[2])

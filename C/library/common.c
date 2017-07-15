@@ -30,6 +30,6 @@
  */
 void printExit(const char *s)
 {
-    perror(s);
-    exit(EXIT_FAILURE);
+	perror(s);
+	exit(EXIT_FAILURE);
 }

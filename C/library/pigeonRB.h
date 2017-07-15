@@ -28,48 +28,48 @@
  *  GPIO symbols
  */
 enum {
-    //Digital opto-isolated inputs
-    IN1 = 12,
-    IN2 = 13,
-    IN3 = 18,
-    IN4 = 19,
-    IN5 = 20,
-    IN6 = 21,
-    IN7 = 22,
-    IN8 = 23,
+	//Digital opto-isolated inputs
+	IN1 = 12,
+	IN2 = 13,
+	IN3 = 18,
+	IN4 = 19,
+	IN5 = 20,
+	IN6 = 21,
+	IN7 = 22,
+	IN8 = 23,
 
-    //Dry contact inputs
-    IND1 = 30,
-    IND2 = 31,
-    IND3 = 32,
-    IND4 = 33,
+	//Dry contact inputs
+	IND1 = 30,
+	IND2 = 31,
+	IND3 = 32,
+	IND4 = 33,
 
-    //Digital outputs
-    OUTE = 34,
-    OUT1 = 35,
-    OUT2 = 36,
-    OUT3 = 37,
-    OUT4 = 38,
-    OUT5 = 39,
-    OUT6 = 40,
-    OUT7 = 41,
-    OUT8 = 42,
+	//Digital outputs
+	OUTE = 34,
+	OUT1 = 35,
+	OUT2 = 36,
+	OUT3 = 37,
+	OUT4 = 38,
+	OUT5 = 39,
+	OUT6 = 40,
+	OUT7 = 41,
+	OUT8 = 42,
 
-    //LEDs    
-    LED0 = 45,
-    LED1 = 47,
+	//LEDs    
+	LED0 = 45,
+	LED1 = 47,
 
-    //WATCHDOG
-    WATCHDOG_EN = 5,
-    WATCHDOG_IN = 44,
+	//WATCHDOG
+	WATCHDOG_EN = 5,
+	WATCHDOG_IN = 44,
 
-    //Powercontrol
-    CTRL_3V3 = 28,
-    CTRL_5V = 29,
-    FAULT_5V = 43,
-           
-    //LAN9514
-    LAN_RESET = 6        
+	//Powercontrol
+	CTRL_3V3 = 28,
+	CTRL_5V = 29,
+	FAULT_5V = 43,
+
+	//LAN9514
+	LAN_RESET = 6        
 };
 
 /*
