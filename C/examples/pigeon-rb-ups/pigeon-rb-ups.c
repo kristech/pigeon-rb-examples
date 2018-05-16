@@ -57,25 +57,25 @@ int main(void)
 {
 	if (wiringPiSetupGpio() != 0)
     {
-        printf("UPS service: wiringPiSetupGpio ERROR\n");
+		printf("UPS service: wiringPiSetupGpio ERROR\n");
 		fflush(stdout);
-        return EXIT_FAILURE;
+		return EXIT_FAILURE;
     }
 
 	pinMode(shutdown_pin, INPUT);
 
 	if (wiringPiISR(shutdown_pin, INT_EDGE_FALLING, &gpio_int))
     {
-        printf("UPS service: wiringPiISR ERROR\n");
+		printf("UPS service: wiringPiISR ERROR\n");
 		fflush(stdout);
-        return EXIT_FAILURE;
+		return EXIT_FAILURE;
     }	
 
 	state = digitalRead(shutdown_pin);
 	
 	if (state == LOW) 
 	{
-        printf("UPS service: shutdown signal active\n");
+		printf("UPS service: shutdown signal active\n");
 		fflush(stdout);
 		system("shutdown -h now");
 		return 0;
