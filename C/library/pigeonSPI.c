@@ -61,6 +61,8 @@ void spiOpen(void)
 	if (ret == -1)
 		printExit("SPI: can't get spi mode\n\r");
 
+	rmode &= 0x03;
+	
 	if ((rmode) != mode)
 		printExit("SPI: set spi mode error\n\r");
 
